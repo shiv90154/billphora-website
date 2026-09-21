@@ -8,7 +8,7 @@ export function PageHero({ eyebrow, title, body }: { eyebrow: string; title: str
           {eyebrow}
         </span>
         <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">{title}</h1>
-        {body && <p className="mt-5 text-base leading-relaxed text-slate-300 sm:text-lg">{body}</p>}
+        {body && <p className="mt-5 text-base leading-relaxed text-slate-100 sm:text-lg">{body}</p>}
       </div>
     </section>
   );

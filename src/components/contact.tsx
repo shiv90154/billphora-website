@@ -58,10 +58,10 @@ export function Contact() {
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             See Billphora in your restaurant
           </h1>
-          <p className="mt-4 max-w-md text-slate-300">
+          <p className="mt-4 max-w-md text-slate-100">
             Share a few details and we will reach out on WhatsApp to set up a free demo.
           </p>
-          <ul className="mt-8 space-y-4 text-sm text-slate-300">
+          <ul className="mt-8 space-y-4 text-sm text-slate-100">
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-sky-300" /> {site.phone}
             </li>
@@ -82,7 +82,7 @@ export function Contact() {
           >
             {fields.map((f) => (
               <div key={f.key}>
-                <label htmlFor={f.key} className="mb-1.5 block text-xs font-medium text-slate-300">
+                <label htmlFor={f.key} className="mb-1.5 block text-xs font-medium text-slate-100">
                   {f.label}
                 </label>
                 <input

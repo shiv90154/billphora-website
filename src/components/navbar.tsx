@@ -36,7 +36,7 @@ export function Navbar() {
               key={l.href}
               href={l.href}
               className={`text-sm font-medium transition hover:text-white ${
-                pathname === l.href ? "text-white" : "text-slate-300"
+                pathname === l.href ? "text-white" : "text-slate-100"
               }`}
             >
               {l.label}
@@ -95,7 +95,7 @@ export function Navbar() {
               >
                 Book free demo
               </Link>
-              <a href={site.loginUrl} className="px-3 py-3 text-center text-sm font-semibold text-slate-300">
+              <a href={site.loginUrl} className="px-3 py-3 text-center text-sm font-semibold text-slate-100">
                 Owner login
               </a>
             </div>

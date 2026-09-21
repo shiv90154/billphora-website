@@ -22,12 +22,12 @@ export function Offline() {
                   {i + 1}
                 </span>
                 <h3 className="mt-5 text-lg font-bold text-white">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300">{s.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-100">{s.body}</p>
               </div>
             </Reveal>
           ))}
         </div>
-        <Reveal className="mt-10 flex items-center justify-center gap-4 text-slate-300">
+        <Reveal className="mt-10 flex items-center justify-center gap-4 text-slate-100">
           <span className="grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-sky-200">
             <Smartphone size={22} />
           </span>

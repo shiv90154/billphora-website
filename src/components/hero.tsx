@@ -39,7 +39,7 @@ export function Hero() {
           <h1 className="mt-6 text-4xl leading-[1.1] font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Bill faster. Serve better. <span className="gradient-text">Never stop.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-100 sm:text-lg">
             Billphora is the GST-ready POS for Indian restaurants. KOT, tables, delivery and stock in one place, and it
             keeps billing even when the internet goes down.
           </p>
@@ -61,7 +61,7 @@ export function Hero() {
               Chat on WhatsApp
             </a>
           </div>
-          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-300">
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-100">
             {["GST ready", "Works offline", "Free demo & setup"].map((t) => (
               <li key={t} className="inline-flex items-center gap-1.5">
                 <CheckCircle2 size={16} className="text-emerald-400" /> {t}
@@ -79,7 +79,7 @@ export function Hero() {
           <div className="animate-float rounded-3xl border border-white/10 bg-white/6 p-5 shadow-2xl shadow-black/40 backdrop-blur">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-slate-400">Bill #A-0142</p>
+                <p className="text-xs text-slate-300">Bill #A-0142</p>
                 <p className="text-sm font-semibold text-white">Table 5 · Dine-in</p>
               </div>
               <span className="rounded-full bg-emerald-400/15 px-2.5 py-1 text-[11px] font-semibold text-emerald-300">
@@ -92,14 +92,14 @@ export function Hero() {
                 ["Butter Naan", "4 × ₹45"],
                 ["Masala Chai", "2 × ₹30"],
               ].map(([a, b]) => (
-                <div key={a} className="flex justify-between text-slate-300">
+                <div key={a} className="flex justify-between text-slate-100">
                   <span>{a}</span>
-                  <span className="text-slate-400">{b}</span>
+                  <span className="text-slate-300">{b}</span>
                 </div>
               ))}
             </div>
             <div className="my-4 h-px bg-white/10" />
-            <div className="flex justify-between text-xs text-slate-400">
+            <div className="flex justify-between text-xs text-slate-300">
               <span>GST 5%</span>
               <span>₹25.00</span>
             </div>
@@ -113,7 +113,7 @@ export function Hero() {
           </div>
 
           <div className="animate-float-slow absolute -bottom-8 -left-10 hidden w-44 sm:block rounded-2xl border border-white/10 bg-ink-soft/95 p-3 shadow-xl backdrop-blur">
-            <p className="mb-2 text-[11px] font-semibold text-slate-400">Tables</p>
+            <p className="mb-2 text-[11px] font-semibold text-slate-300">Tables</p>
             <div className="grid grid-cols-3 gap-1.5">
               {tables.map((t) => (
                 <span
@@ -131,7 +131,7 @@ export function Hero() {
               <ChefHat size={16} />
             </span>
             <div>
-              <p className="text-[11px] text-slate-400">KOT sent</p>
+              <p className="text-[11px] text-slate-300">KOT sent</p>
               <p className="text-xs font-semibold text-white">Kitchen · 2 items</p>
             </div>
           </div>

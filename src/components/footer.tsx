@@ -5,7 +5,7 @@ import { navLinks, site } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink text-slate-400">
+    <footer className="border-t border-white/10 bg-ink text-slate-100">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <Logo light />
@@ -68,7 +68,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5 text-center text-xs">
+      <div className="border-t border-white/10 py-5 text-center text-xs text-slate-200">
         © {new Date().getFullYear()} {site.company} All rights reserved.
       </div>
     </footer>

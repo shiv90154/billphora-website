@@ -32,7 +32,7 @@ export function Pricing({ standalone = false }: { standalone?: boolean }) {
                   </span>
                 )}
                 <Title className="text-xl font-extrabold">{p.name}</Title>
-                <p className={`mt-1 text-sm ${p.featured ? "text-slate-300" : "text-muted-foreground"}`}>{p.blurb}</p>
+                <p className={`mt-1 text-sm ${p.featured ? "text-slate-100" : "text-muted-foreground"}`}>{p.blurb}</p>
                 <p className="mt-6 text-3xl font-extrabold">Contact us</p>
                 <ul className="mt-6 flex-1 space-y-3">
                   {p.points.map((pt) => (

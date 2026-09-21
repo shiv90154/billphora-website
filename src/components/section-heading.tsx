@@ -28,7 +28,7 @@ export function SectionHeading({
         {title}
       </h2>
       {body && (
-        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${light ? "text-slate-300" : "text-muted-foreground"}`}>
+        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${light ? "text-slate-100" : "text-muted-foreground"}`}>
           {body}
         </p>
       )}

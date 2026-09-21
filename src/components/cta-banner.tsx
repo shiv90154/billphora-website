@@ -10,7 +10,7 @@ export function CtaBanner() {
         <h2 className="relative text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           Ready to bill without limits?
         </h2>
-        <p className="relative mx-auto mt-4 max-w-xl text-slate-300">
+        <p className="relative mx-auto mt-4 max-w-xl text-slate-100">
           Book a free demo and see how Billphora fits your restaurant.
         </p>
         <Link
