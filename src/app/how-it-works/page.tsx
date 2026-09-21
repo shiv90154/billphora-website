@@ -14,7 +14,7 @@ export default function HowItWorks() {
         title="From setup to first bill, simply"
         body="We handle the setup so your team can start billing on day one."
       />
-      <Steps />
+      <Steps standalone />
       <Offline />
       <CtaBanner />
     </main>

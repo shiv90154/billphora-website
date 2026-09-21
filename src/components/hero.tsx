@@ -74,7 +74,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto w-full max-w-md"
+          className="relative mx-auto mb-4 w-full max-w-md lg:mb-0"
         >
           <div className="animate-float rounded-3xl border border-white/10 bg-white/6 p-5 shadow-2xl shadow-black/40 backdrop-blur">
             <div className="flex items-center justify-between">
@@ -112,7 +112,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="animate-float-slow absolute -bottom-8 -left-4 w-44 rounded-2xl border border-white/10 bg-ink-soft/95 p-3 shadow-xl backdrop-blur sm:-left-10">
+          <div className="animate-float-slow absolute -bottom-8 -left-10 hidden w-44 sm:block rounded-2xl border border-white/10 bg-ink-soft/95 p-3 shadow-xl backdrop-blur">
             <p className="mb-2 text-[11px] font-semibold text-slate-400">Tables</p>
             <div className="grid grid-cols-3 gap-1.5">
               {tables.map((t) => (
@@ -126,7 +126,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="animate-float-slow absolute -top-6 -right-2 flex items-center gap-2 rounded-2xl border border-white/10 bg-ink-soft/95 px-3.5 py-2.5 shadow-xl backdrop-blur sm:-right-8">
+          <div className="animate-float-slow absolute -top-8 right-2 flex items-center gap-2 rounded-2xl border border-white/10 bg-ink-soft/95 px-3.5 py-2.5 shadow-xl backdrop-blur sm:-top-6 sm:-right-8">
             <span className="grid h-8 w-8 place-items-center rounded-lg bg-amber-400/15 text-amber-300">
               <ChefHat size={16} />
             </span>

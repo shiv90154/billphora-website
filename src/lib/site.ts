@@ -38,7 +38,7 @@ export const navLinks = [
 
 export const stats = [
   { value: 100, suffix: "%", label: "Billing works offline" },
-  { value: 5, suffix: "%", label: "GST & cess handled" },
+  { value: 24, suffix: "/7", label: "Call support" },
   { value: 3, suffix: "", label: "Order modes in one app" },
   { value: 0, suffix: "", label: "Bills lost to bad internet" },
 ];
@@ -108,19 +108,19 @@ export const plans = [
   {
     name: "Starter",
     blurb: "For a single counter or small cafe.",
-    points: ["Offline billing app", "GST bills & KOT", "Owner dashboard", "Email support"],
+    points: ["Offline billing app", "GST bills & KOT", "Owner dashboard", "Free demo and setup"],
     featured: false,
   },
   {
     name: "Growth",
     blurb: "For busy restaurants with staff and tables.",
-    points: ["Everything in Starter", "Table & delivery flows", "Staff roles & permissions", "Stock & purchase orders", "Priority support"],
+    points: ["Everything in Starter", "Table & delivery flows", "Staff roles & permissions", "Stock & purchase orders"],
     featured: true,
   },
   {
     name: "Multi-outlet",
     blurb: "For groups running several restaurants.",
-    points: ["Everything in Growth", "Multiple outlets", "Custom onboarding", "Dedicated manager"],
+    points: ["Everything in Growth", "Multiple outlets", "Custom onboarding", "Tailored support"],
     featured: false,
   },
 ];

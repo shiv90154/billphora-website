@@ -4,16 +4,18 @@ import { plans } from "@/lib/site";
 import { Reveal } from "./reveal";
 import { SectionHeading } from "./section-heading";
 
-export function Pricing() {
+export function Pricing({ standalone = false }: { standalone?: boolean }) {
   return (
     <section id="pricing" className="bg-muted py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading
-          eyebrow="Pricing"
-          title="Simple plans that fit your restaurant"
-          body="Talk to us for a quote. Every plan starts with a free demo and setup."
-        />
-        <div className="mt-14 grid items-stretch gap-6 md:grid-cols-3">
+        {!standalone && (
+          <SectionHeading
+            eyebrow="Pricing"
+            title="Simple plans that fit your restaurant"
+            body="Talk to us for a quote. Every plan starts with a free demo and setup."
+          />
+        )}
+        <div className={`${standalone ? "pt-4 " : "mt-14 "}grid items-stretch gap-6 md:grid-cols-3`}>
           {plans.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.1}>
               <div

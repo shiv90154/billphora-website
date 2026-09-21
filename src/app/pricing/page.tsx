@@ -14,7 +14,7 @@ export default function PricingPage() {
         title="Plans that grow with you"
         body="Every plan begins with a free demo and hands-on setup."
       />
-      <Pricing />
+      <Pricing standalone />
       <Faq />
       <CtaBanner />
     </main>

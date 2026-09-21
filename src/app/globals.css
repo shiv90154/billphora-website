@@ -74,5 +74,6 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
   .animate-float, .animate-float-slow { animation: none; }
 }

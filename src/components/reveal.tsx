@@ -13,6 +13,7 @@ export function Reveal({
 }) {
   return (
     <motion.div
+      data-reveal
       className={className}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}

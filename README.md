@@ -7,4 +7,4 @@ npm install
 npm run dev
 ```
 
-Production: `docker compose up -d --build` (serves on 127.0.0.1:3020 behind nginx).
+Production: see DEPLOYMENT.md for the server, how to update and rollback.
