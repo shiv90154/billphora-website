@@ -3,6 +3,7 @@ import { Reveal } from "./reveal";
 import { SectionHeading } from "./section-heading";
 
 export function Steps({ standalone = false }: { standalone?: boolean }) {
+  const Title = standalone ? "h2" : "h3";
   return (
     <section id="how" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -14,7 +15,7 @@ export function Steps({ standalone = false }: { standalone?: boolean }) {
               <span className="relative mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand text-lg font-extrabold text-white shadow-lg shadow-brand/30 ring-8 ring-background">
                 {i + 1}
               </span>
-              <h3 className="mt-5 text-lg font-bold">{s.title}</h3>
+              <Title className="mt-5 text-lg font-bold">{s.title}</Title>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
             </Reveal>
           ))}

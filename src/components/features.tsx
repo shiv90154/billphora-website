@@ -3,6 +3,7 @@ import { Reveal } from "./reveal";
 import { SectionHeading } from "./section-heading";
 
 export function Features({ limit, standalone = false }: { limit?: number; standalone?: boolean }) {
+  const Title = standalone ? "h2" : "h3";
   return (
     <section id="features" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -18,7 +19,7 @@ export function Features({ limit, standalone = false }: { limit?: number; standa
                 <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white">
                   <f.icon size={22} />
                 </span>
-                <h3 className="mt-5 text-lg font-bold">{f.title}</h3>
+                <Title className="mt-5 text-lg font-bold">{f.title}</Title>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
               </div>
             </Reveal>

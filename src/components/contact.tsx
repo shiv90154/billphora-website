@@ -55,9 +55,9 @@ export function Contact() {
           <span className="inline-block rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold tracking-wider text-sky-200 uppercase">
             Book a demo
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             See Billphora in your restaurant
-          </h2>
+          </h1>
           <p className="mt-4 max-w-md text-slate-300">
             Share a few details and we will reach out on WhatsApp to set up a free demo.
           </p>
@@ -109,7 +109,7 @@ export function Contact() {
             <button
               type="submit"
               disabled={locked}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#25D366]/30 transition hover:brightness-95 disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[#0e7c47] py-3.5 text-sm font-semibold text-white shadow-lg shadow-black/20 transition hover:bg-[#0b6a3c] disabled:opacity-60"
             >
               <WhatsappIcon size={18} /> Send on WhatsApp
             </button>

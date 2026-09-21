@@ -35,7 +35,7 @@ export default function About() {
               stock from anywhere.
             </p>
           </Reveal>
-          <Reveal delay={0.1} className="grid place-items-center gap-4 rounded-3xl border border-border bg-muted p-8">
+          <Reveal delay={0.1} className="grid place-items-center gap-4 rounded-3xl border border-border bg-white p-8">
             <Image src="/inphora-logo.png" alt={site.company} width={777} height={268} className="h-24 w-auto" />
             <p className="text-sm text-muted-foreground">{site.city}</p>
           </Reveal>

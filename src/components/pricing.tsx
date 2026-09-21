@@ -5,6 +5,7 @@ import { Reveal } from "./reveal";
 import { SectionHeading } from "./section-heading";
 
 export function Pricing({ standalone = false }: { standalone?: boolean }) {
+  const Title = standalone ? "h2" : "h3";
   return (
     <section id="pricing" className="bg-muted py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -30,7 +31,7 @@ export function Pricing({ standalone = false }: { standalone?: boolean }) {
                     Most popular
                   </span>
                 )}
-                <h3 className="text-xl font-extrabold">{p.name}</h3>
+                <Title className="text-xl font-extrabold">{p.name}</Title>
                 <p className={`mt-1 text-sm ${p.featured ? "text-slate-300" : "text-muted-foreground"}`}>{p.blurb}</p>
                 <p className="mt-6 text-3xl font-extrabold">Contact us</p>
                 <ul className="mt-6 flex-1 space-y-3">
