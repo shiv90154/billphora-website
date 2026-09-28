@@ -12,8 +12,8 @@ export default function FeaturesPage() {
     <main>
       <PageHero
         eyebrow="Features"
-        title="Everything your restaurant needs"
-        body="Billing, kitchen, tables, delivery, stock and reports in one simple platform."
+        title="Everything your business needs"
+        body="Billing, stock, staff and reports in one simple platform, with workflows for your trade."
       />
       <Features standalone />
       <Offline />

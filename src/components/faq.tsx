@@ -12,7 +12,7 @@ export function Faq() {
   return (
     <section id="faq" className="py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <SectionHeading eyebrow="FAQ" title="Questions restaurant owners ask" />
+        <SectionHeading eyebrow="FAQ" title="Questions business owners ask" />
         <div className="mt-12 space-y-3">
           {faqs.map((f, i) => {
             const isOpen = open === i;

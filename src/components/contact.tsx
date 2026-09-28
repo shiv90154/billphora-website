@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { site, whatsappLink } from "@/lib/site";
+import { useSearchParams } from "next/navigation";
+import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { industries, site, whatsappLink } from "@/lib/site";
 import { Reveal } from "./reveal";
 import { WhatsappIcon } from "./whatsapp-icon";
 import { validateDemo, type DemoErrors, type DemoForm } from "@/lib/validation";
@@ -21,16 +22,24 @@ const fields: {
 }[] = [
   { key: "name", label: "Your name", placeholder: "Rahul Sharma", type: "text", max: 60, autoComplete: "name" },
   { key: "phone", label: "Mobile number", placeholder: "98765 43210", type: "tel", max: 16, inputMode: "tel", autoComplete: "tel" },
-  { key: "restaurant", label: "Restaurant name", placeholder: "Sharma Dhaba", type: "text", max: 80, autoComplete: "organization" },
+  { key: "business", label: "Business name", placeholder: "Sharma Traders", type: "text", max: 80, autoComplete: "organization" },
+  { key: "type", label: "Business type", placeholder: "Select business type", type: "select", max: 20, autoComplete: "off" },
   { key: "city", label: "City", placeholder: "Mohali", type: "text", max: 60, autoComplete: "address-level2" },
 ];
 
 export function Contact() {
-  const [form, setForm] = useState<DemoForm>({ name: "", phone: "", restaurant: "", city: "" });
+  const preset = useSearchParams().get("type") ?? "";
+  const [form, setForm] = useState<DemoForm>({
+    name: "",
+    phone: "",
+    business: "",
+    type: industries.some((i) => i.name === preset) ? preset : "",
+    city: "",
+  });
   const [errors, setErrors] = useState<DemoErrors>({});
   const [locked, setLocked] = useState(false);
 
-  const set = (k: keyof DemoForm) => (e: React.ChangeEvent<HTMLInputElement>) => {
+  const set = (k: keyof DemoForm) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setForm((f) => ({ ...f, [k]: e.target.value }));
     setErrors((er) => ({ ...er, [k]: undefined }));
   };
@@ -43,7 +52,7 @@ export function Contact() {
     if (Object.keys(found).length > 0) return;
     setLocked(true);
     setTimeout(() => setLocked(false), 3000);
-    const msg = `Hi, I want a Billphora demo.\nName: ${values.name}\nPhone: ${values.phone}\nRestaurant: ${values.restaurant}\nCity: ${values.city}`;
+    const msg = `Hi, I want a Billphora demo.\nName: ${values.name}\nPhone: ${values.phone}\nBusiness: ${values.business}\nType: ${values.type}\nCity: ${values.city}`;
     window.open(whatsappLink(msg), "_blank", "noopener,noreferrer");
   };
 
@@ -56,11 +65,18 @@ export function Contact() {
             Book a demo
           </span>
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            See Billphora in your restaurant
+            See Billphora in your business
           </h1>
           <p className="mt-4 max-w-md text-slate-100">
             Share a few details and we will reach out on WhatsApp to set up a free demo.
           </p>
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-100">
+            {["Free demo", "Hands-on setup", "Works offline"].map((t) => (
+              <li key={t} className="inline-flex items-center gap-1.5">
+                <CheckCircle2 size={16} className="text-emerald-400" /> {t}
+              </li>
+            ))}
+          </ul>
           <ul className="mt-8 space-y-4 text-sm text-slate-100">
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-sky-300" /> {site.phone}
@@ -85,20 +101,39 @@ export function Contact() {
                 <label htmlFor={f.key} className="mb-1.5 block text-xs font-medium text-slate-100">
                   {f.label}
                 </label>
-                <input
-                  id={f.key}
-                  name={f.key}
-                  type={f.type}
-                  inputMode={f.inputMode}
-                  autoComplete={f.autoComplete}
-                  maxLength={f.max}
-                  placeholder={f.placeholder}
-                  value={form[f.key]}
-                  onChange={set(f.key)}
-                  aria-invalid={errors[f.key] ? true : undefined}
-                  aria-describedby={errors[f.key] ? `${f.key}-error` : undefined}
-                  className={`${fieldClass} ${errors[f.key] ? "border-red-400/70" : ""}`}
-                />
+                {f.type === "select" ? (
+                  <select
+                    id={f.key}
+                    name={f.key}
+                    value={form[f.key]}
+                    onChange={set(f.key)}
+                    aria-invalid={errors[f.key] ? true : undefined}
+                    aria-describedby={errors[f.key] ? `${f.key}-error` : undefined}
+                    className={`${fieldClass} ${errors[f.key] ? "border-red-400/70" : ""} [&>option]:text-black`}
+                  >
+                    <option value="">{f.placeholder}</option>
+                    {industries.map((i) => (
+                      <option key={i.name} value={i.name}>
+                        {i.name}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <input
+                    id={f.key}
+                    name={f.key}
+                    type={f.type}
+                    inputMode={f.inputMode}
+                    autoComplete={f.autoComplete}
+                    maxLength={f.max}
+                    placeholder={f.placeholder}
+                    value={form[f.key]}
+                    onChange={set(f.key)}
+                    aria-invalid={errors[f.key] ? true : undefined}
+                    aria-describedby={errors[f.key] ? `${f.key}-error` : undefined}
+                    className={`${fieldClass} ${errors[f.key] ? "border-red-400/70" : ""}`}
+                  />
+                )}
                 {errors[f.key] && (
                   <p id={`${f.key}-error`} role="alert" className="mt-1.5 text-xs text-red-300">
                     {errors[f.key]}

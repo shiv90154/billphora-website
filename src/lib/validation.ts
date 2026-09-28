@@ -1,4 +1,6 @@
-export type DemoForm = { name: string; phone: string; restaurant: string; city: string };
+import { industries } from "@/lib/site";
+
+export type DemoForm = { name: string; phone: string; business: string; type: string; city: string };
 export type DemoErrors = Partial<Record<keyof DemoForm, string>>;
 
 const CONTROL_CHARS = /[\u0000-\u001F\u007F<>]/g;
@@ -21,13 +23,15 @@ export function validateDemo(raw: DemoForm): { values: DemoForm; errors: DemoErr
   const values: DemoForm = {
     name: clean(raw.name, 60),
     phone: normalizePhone(raw.phone),
-    restaurant: clean(raw.restaurant, 80),
+    business: clean(raw.business, 80),
+    type: clean(raw.type, 20),
     city: clean(raw.city, 60),
   };
   const errors: DemoErrors = {};
   if (!PERSON.test(values.name)) errors.name = "Enter your name using letters only (2 to 60 characters).";
   if (!/^[6-9]\d{9}$/.test(values.phone)) errors.phone = "Enter a valid 10-digit Indian mobile number.";
-  if (!PLACE.test(values.restaurant)) errors.restaurant = "Enter your restaurant name (2 to 80 characters).";
+  if (!PLACE.test(values.business)) errors.business = "Enter your business name (2 to 80 characters).";
+  if (!industries.some((i) => i.name === values.type)) errors.type = "Choose your business type.";
   if (!PERSON.test(values.city)) errors.city = "Enter a valid city name.";
   return { values, errors };
 }

@@ -12,7 +12,7 @@ export function Pricing({ standalone = false }: { standalone?: boolean }) {
         {!standalone && (
           <SectionHeading
             eyebrow="Pricing"
-            title="Simple plans that fit your restaurant"
+            title="Simple plans that fit your business"
             body="Talk to us for a quote. Every plan starts with a free demo and setup."
           />
         )}

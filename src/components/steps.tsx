@@ -7,7 +7,7 @@ export function Steps({ standalone = false }: { standalone?: boolean }) {
   return (
     <section id="how" className="py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {!standalone && <SectionHeading eyebrow="How it works" title="Live in your restaurant in no time" />}
+        {!standalone && <SectionHeading eyebrow="How it works" title="Live in your business in no time" />}
         <div className={`relative ${standalone ? "" : "mt-14 "}grid gap-8 sm:grid-cols-2 lg:grid-cols-4`}>
           <div className="absolute top-6 right-[12%] left-[12%] hidden h-px bg-linear-to-r from-transparent via-brand/40 to-transparent lg:block" />
           {steps.map((s, i) => (

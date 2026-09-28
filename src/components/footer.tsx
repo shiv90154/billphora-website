@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <Logo light />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed">{site.tagline}. Made for Indian restaurants.</p>
+          <p className="mt-4 max-w-xs text-sm leading-relaxed">{site.tagline}. Made for Indian businesses.</p>
         </div>
         <div>
           <p className="text-sm font-semibold text-white">Explore</p>

@@ -19,7 +19,7 @@ export default function About() {
     <main>
       <PageHero
         eyebrow="About"
-        title="Built by Inphora, made for restaurants"
+        title="Built by Inphora, made for Indian businesses"
         body="Billphora is a product of Inphora Pvt. Ltd., an IT services and industrial training company in Mohali."
       />
       <section className="py-20 sm:py-28">
@@ -27,12 +27,12 @@ export default function About() {
           <Reveal>
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Why we built Billphora</h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              Restaurants cannot afford to stop billing because the internet dropped. We built Billphora offline-first,
+              Restaurants, pharmacies, retail stores and jewellers cannot afford to stop billing because the internet dropped. We built Billphora offline-first,
               so every bill is saved on the counter device and synced to the cloud when you choose.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Along with GST-ready billing, KOT, tables and delivery, owners get a dashboard to track sales, staff and
-              stock from anywhere.
+              Along with GST-ready billing and workflows made for each trade, owners get a dashboard to track sales, staff
+              and stock from anywhere.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="grid place-items-center gap-4 rounded-3xl border border-border bg-white p-8">

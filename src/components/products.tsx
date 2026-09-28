@@ -7,13 +7,13 @@ const products = [
     icon: Smartphone,
     name: "Billing app",
     tag: "For your counter staff",
-    points: ["Works fully offline", "Dine-in, takeaway, delivery", "KOT and bill printing", "Manual sync to cloud"],
+    points: ["Works fully offline", "Fast counter billing for your trade", "Bill and receipt printing", "Manual sync to cloud"],
   },
   {
     icon: Monitor,
     name: "Owner dashboard",
     tag: "For you, from anywhere",
-    points: ["Sales and settlement reports", "Menu, tables and customers", "Staff, roles and permissions", "Stock, suppliers, purchase orders"],
+    points: ["Sales and settlement reports", "Catalogue, outlets and customers", "Staff, roles and permissions", "Stock, suppliers, purchase orders"],
   },
 ];
 
