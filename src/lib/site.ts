@@ -33,7 +33,7 @@ export const site = {
   phone: "+91 86999 41978",
   whatsapp: "918699941978",
   email: "contact@inphora.in",
-  loginUrl: "https://srv1975591.hstgr.cloud",
+  loginUrl: "/login",
 };
 
 export const navLinks = [
