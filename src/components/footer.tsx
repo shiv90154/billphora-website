@@ -42,10 +42,14 @@ export function Footer() {
                 <span className="mb-1 block text-[10px] font-semibold tracking-wider text-slate-500 uppercase">
                   A product of
                 </span>
-                <Image src="/inphora-logo.png" alt={site.company} width={777} height={268} className="h-9 w-auto" />
+                <Image src="/inphora-logo.png" alt={site.company} width={777} height={268} unoptimized className="h-9 w-auto" />
               </a>
             </li>
-            <li>{site.address}</li>
+            <li>
+              <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-white">
+                {site.address}
+              </a>
+            </li>
             <li>
               <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="transition hover:text-white">
                 {site.phone}

@@ -30,6 +30,7 @@ export const site = {
   companyUrl: "https://inphora.in",
   city: "Mohali, Punjab, India",
   address: "Plot No. F-177, Kailash Tower, 3rd Floor, Phase 8B, Sector 74, Mohali",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kailash+Tower+Phase+8B+Sector+74+Mohali",
   phone: "+91 86999 41978",
   whatsapp: "918699941978",
   email: "contact@inphora.in",

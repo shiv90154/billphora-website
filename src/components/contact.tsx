@@ -79,14 +79,18 @@ export function Contact() {
           </ul>
           <ul className="mt-8 space-y-4 text-sm text-slate-100">
             <li className="flex items-center gap-3">
-              <Phone size={18} className="text-sky-300" /> {site.phone}
+              <Phone size={18} className="text-sky-300" />
+              <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-sky-300" />
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin size={18} className="mt-0.5 shrink-0 text-sky-300" /> {site.address}
+              <MapPin size={18} className="mt-0.5 shrink-0 text-sky-300" />
+              <a href={site.mapsUrl} target="_blank" rel="noopener noreferrer">
+                {site.address}
+              </a>
             </li>
           </ul>
         </Reveal>
@@ -109,7 +113,7 @@ export function Contact() {
                     onChange={set(f.key)}
                     aria-invalid={errors[f.key] ? true : undefined}
                     aria-describedby={errors[f.key] ? `${f.key}-error` : undefined}
-                    className={`${fieldClass} ${errors[f.key] ? "border-red-400/70" : ""} [&>option]:text-black`}
+                    className={`${fieldClass} ${errors[f.key] ? "border-red-400/70" : ""} [color-scheme:dark] [&>option]:bg-ink [&>option]:text-white`}
                   >
                     <option value="">{f.placeholder}</option>
                     {industries.map((i) => (
