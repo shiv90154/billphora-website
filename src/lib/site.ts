@@ -200,7 +200,7 @@ export const industries: Industry[] = [
       tax: ["GST 3%", "₹1,134.00"],
       total: "₹38,934",
       chips: [
-        { icon: Gem, label: "Gold rate", value: "₹7,000 / g" },
+        { icon: Gem, label: "Making charges", value: "8% added" },
         { icon: BadgeCheck, label: "Hallmark", value: "HUID verified" },
       ],
     },
